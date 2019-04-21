@@ -1,84 +1,73 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" dir="ltr">
   <head>
-    <title>Portfolio | Ellen Shen Rotroff</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Material Design Lite -->
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-lime.min.css">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="styles/main.css">
+    <title>Ellen Shen Rotroff | Portfolio</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
-    <header class="mdl-layout__header mdl-layout__header--transparent">
-      <h1>Ellen Shen Rotroff</h1>
-      <p class="slogan">Product designer from San Francisco</p>
-    </header>
-    <main class="mdl-layout__content mdl-grid">
-      <div class="project featured-project mdl-grid mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp">
-        <div class="mdl-cell mdl-cell--5-col mdl-cell--12-col-tablet">
-          <img src="http://lorempixel.com/350/260/abstract/placeholder-1" alt="project screenshot" />
+    <div class="container">
+
+      <section class="nav">
+        <a href="project.html" class="logo">Ellen Shen Rotroff</a>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="nav-links">
+          <li class="projects"><a href="#projects">PROJECTS</a></li>
+          <li class="about"><a href="#about">ABOUT</a></li>
+          <li class="connect"><a href="#connect">CONNECT</a></li>
+        </ul>
+      </section>
+
+      <section class="hero">
+        <h1>ELLEN SHEN ROTROFF</h1>
+        <p class="hero-description">Hi! I'm a product designer based in San Francisco - <a href="#projects">see my work<a/> or <a href="#connect">say hello</a>.</p>
+        <div class="scroll-down-line"></div>
+      </section>
+
+      <section class="projects">
+        <h2><a class="section-header" name="projects">PROJECTS</a></h2>
+        <div class="case-study-1">
+          <img src="images/gather/case-study-hero.jpg" alt=""></img>
+          <h3>GATHER</h3>
+          <p>An organized and collaborative wedding planning experience for modern couples</p>
+          <button type="button" class="light">View Case Study</button>
         </div>
-        <div class="mdl-cell mdl-cell--7-col">
-          <h2 class="mdl-card__title-text">Featured Project Name</h2>
-          <p class="project-description mdl-card__supporting-text">Project description text</p>
-        </div>
-      </div>
-      <div class="project mdl-cell mdl-card mdl-shadow--4dp">
-        <div>
-          <img src="http://lorempixel.com/350/260/abstract/placeholder-2" alt="project screenshot" />
-        </div>
-        <div class="mdl-card__title">
-          <h2>Project Name</h2>
-        </div>
-        <div class="mdl-card__supporting-text"><p>Project description text</p></div>
-      </div>
-      <div class="project mdl-cell mdl-card mdl-shadow--4dp">
-        <div>
-          <img src="http://lorempixel.com/350/260/abstract/placeholder-3" alt="project screenshot" />
-        </div>
-        <div class="mdl-card__title">
-          <h2>Project Name</h2>
-        </div>
-        <div class="mdl-card__supporting-text"><p>Project description text</p></div>
-      </div>
-      <div class="project mdl-cell mdl-card mdl-shadow--4dp">
-        <div>
-          <img src="http://lorempixel.com/350/260/abstract/placeholder-4" alt="project screenshot" />
-        </div>
-        <div class="mdl-card__title">
-          <h2>Project Name</h2>
-        </div>
-        <div class="mdl-card__supporting-text"><p>Project description text</p></div>
-      </div>
-    </main>
-    <footer class="mdl-mini-footer">
-      <ul class="mdl-mini-footer__link-list">
-        <li>
-          <a href="https://www.linkedin.com/in/eshen/">
-            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/lnshen">
-            <i class="fa fa-github-square" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://twitter.com/ellenshen">
-            <i class="fa fa-twitter-square" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li>
-          <a href="mailto:ellencshen@gmail.com">
-            <i class="fa fa-envelope-square" aria-hidden="true"></i>
-          </a>
-        </li>
-      </ul>
-    </footer>
+      </section>
+
+      <section class="about">
+        <p><span class="biography-intro"><a name="about">MY NAME IS ELLEN SHEN ROTROFF</a></span> <span class="italicized">(row-trough)</span>.</p>
+        <p>I have a business background and have worked in that capacity at companies like Google, Sears, and Cheerily. I learned a lot in those roles, like:
+          <ul>
+            <li>how to work on huge cross-functional projects,</li>
+            <li>how to prioritize product needs,</li>
+            <li>how to test and then test some more,</li>
+            <li>how to create an authentic consumer brand,</li>
+            <li>how to work hard but not be too precious with deliverables</li>
+          </ul>
+        <p>Of course, there were other things I did in these roles too: manage inventory, lower margins, and a lot of analyses. At my core though, I always felt most driven when I was working closest to product to create better user experiences. It became clear that if I wanted to focus on that mission, then I needed to change my role - so I made the switch to product design.</p>
+        <p>If you’re looking for a business-minded, but user-focused designer, <a href="mailto:ellen@ellenshen.com">drop me a line!</a></p>
+      </section>
+
+      <section class="photo">
+        <img src="images/ellen.png" alt="Photo of Ellen"></img>
+        <div class="decorative-line-start"></div>
+      </section>
+
+      <footer>
+        <div class="decorative-line-end"></div>
+        <h2><a class="section-header" name="connect">Connect</a></h2>
+        <p><a href="mailto:ellen@ellenshen.com">ellen@ellenshen.com</a></p>
+        <ul class="social-links">
+          <li class="linkedin"><a href="https://www.linkedin.com/in/eshen/"><img src="images/icons8-linkedin.png" alt="LinkedIn icon" /></a></li>
+          <li class="github"><a href="https://github.com/lnshen"><img src="images/icons8-github.png" alt="Github icon" /></a></li>
+          <li class="twitter"><a href="https://twitter.com/ellenshen"><img src="images/icons8-twitter.png" alt="Twitter icon" /></a></li>
+          <li class="instagram"><a href="https://www.instagram.com/ecshen/"><img src="images/icons8-instagram_new.png" alt="Instagram icon" /></a></li>
+          <li class="pinterest"><a href="https://www.pinterest.com/ellenshen/"><img src="images/icons8-pinterest.png" alt="Pinterest icon" /></a></li>
+        </ul>
+      </footer>
+
+    </div>
   </body>
 </html>
