@@ -1,0 +1,711 @@
+@font-face {
+    font-family: 'Metropolis Regular';
+    src: local("Metropolis-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Metropolis SemiBold';
+    src: local('Metropolis-SemiBold.ttf');
+}
+
+/* ---------- universal ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+
+
+/* ----------- structure ----------- */
+
+.container-home {
+  background-color: rgba(241, 236, 234, 1);
+  display: grid;
+  grid-template-columns: 1fr 4fr 2fr 4fr 1fr;
+  grid-template-areas:
+  ".                      nav                    nav                    nav                    ."
+  ".                      hero                   hero                   .                      ."
+  ".                      .                      scroll-down-line       .                      ."
+  "projects               projects               projects               projects               projects"
+  ".                      about                  about                  about                  ."
+  ".                      photo                  photo                  photo                  ."
+  ".                      .                      decorative-line-top    .                      ."
+  "decorative-line-bottom decorative-line-bottom decorative-line-bottom decorative-line-bottom decorative-line-bottom"
+  "footer                 footer                 footer                 footer                 footer";
+}
+
+
+.container-project {
+  background-color: rgba(241, 236, 234, 1);
+}
+
+section.portfolio {
+  padding: 5rem 8%;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+
+/* ---------- grid stuff below - save for responsive work ----------- */
+
+/* .container-project {
+  background-color: rgba(241, 236, 234, 1);
+  margin: 0 5rem;
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-areas:
+    "proj-nav proj-nav proj-nav"
+    "proj-hero proj-hero proj-hero"
+    ". role-section ."
+    "overview overview overview"
+    ". comp-analysis ."
+    "user-research user-research user-research"
+    ". personas ."
+    ". user-stories ."
+    "wireframes wireframes wireframes"
+    ". user-testing ."
+    "branding branding branding"
+    "mockups mockups mockups"
+    ".prototype prototype prototype"
+    ". closing-thoughts ."
+    "footer footer footer";
+
+} */
+
+/* .proj-nav {
+  grid-area: proj-nav;
+}
+.proj-hero {
+  grid-area: proj-hero;
+}
+
+.role-section {
+  grid-area: role-section;
+}
+
+.overview {
+  grid-area: overview;
+}
+
+.comp-analysis {
+  grid-area: comp-analysis;
+}
+
+.user-research {
+  grid-area: user-research;
+}
+
+.personas {
+  grid-area: personas;
+}
+
+.user-stories {
+  grid-area: user-stories;
+}
+
+.wireframes {
+  grid-area: wireframes;
+}
+
+.user-testing {
+  grid-area: user-testing;
+}
+
+.branding {
+  grid-area: branding;
+}
+
+.mockups {
+  grid-area: mockups;
+}
+
+.prototype {
+  grid-area: prototype;
+}
+
+.closing-thoughts {
+  grid-area: closing-thoughts;
+} */
+
+/* ----------- background colors ----------- */
+
+section {
+  background-color: rgba(241, 236, 234, 1);
+}
+
+footer,
+.projects,
+.decorative-line-bottom,
+.overview {
+  background-color: #AB684D;
+}
+
+
+
+/* ----------- typography - general ----------- */
+
+h1 {
+  color: #91231B;
+  font-family: 'Playfair Display', serif;
+  font-size: 6em;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+h2, h3, p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8em;
+  line-height: 130%;
+}
+
+
+h2, h3 {
+  color: #E0DDD7;
+  margin: 0 0 5rem 0;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+h2.dark {
+  color: #91231B;
+  margin: 0 0 3rem 0;
+}
+
+h3, p {
+  font-weight: 400;
+}
+
+p {
+  color: #060206;
+  margin: 0 0 3rem 0;
+}
+
+p.light {
+  color: #E0DDD7;
+}
+
+a {
+  color: #91231B;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a.highlight {
+  background: rgba(183, 156, 130, 0.3);
+}
+
+a.highlight:hover,
+a.highlight:focus {
+  font-weight: 600;
+}
+
+a.highlight:active {
+  background: rgba(183, 156, 130, 0.5);
+}
+
+footer a {
+  color: #E0DDD7;
+  font-size: 1.8em;
+  text-decoration: none;
+}
+
+
+/* ----------- list styling ----------- */
+
+ul {
+  color: #060206;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8em;
+  font-weight: 400;
+  line-height: 130%;
+  margin: 0 0 3rem 0;
+}
+
+li {
+  padding: 0 0 0.5rem 0;
+}
+
+.bulleted-list {
+  list-style: disc;
+}
+
+
+
+/* ----------- button styling ----------- */
+
+a.btn {
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.8rem;
+  padding: 1.5rem;
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: none;
+  transition: background 150ms ease-in-out,
+              transform 50ms ease;
+  width: 100%;
+}
+
+a.btn:focus {
+    outline-offset: -2px;
+}
+
+a.btn:active {
+    transform: scale(0.99);
+}
+
+a.light {
+  background: #FFFFFF;
+  color: #91231B;
+}
+
+a.light:hover,
+a.light:focus {
+    background: rgba(241, 236, 234, 1);
+}
+
+a.light:focus {
+    outline: 1px solid #AB684D;
+}
+
+a.dark {
+  background: #AB684D;
+  color: #FFF;
+}
+
+a.dark:hover,
+a.dark:focus {
+    background: rgba(171, 104, 77, 0.9);
+}
+
+a.dark:focus {
+    outline: 1px solid #FFF;
+}
+
+
+
+/* ----------- projects section - HERO ----------- */
+
+.proj-hero {
+  text-align: center;
+}
+
+.proj-hero-img {
+  padding: 0 0 3rem 0;
+  width: 90%;
+
+}
+
+.proj-hero-logo {
+  padding: 0 0 3rem 0;
+  width: 40%;
+  max-width: 20rem;
+}
+
+/* ----------- projects section - ROLE ----------- */
+
+.role, .deliverables, .tools {
+  text-align: center;
+}
+
+.role-text h2 {
+  margin: 0;
+}
+
+/* ----------- projects section - OVERVIEW ----------- */
+
+.overview {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-areas:
+        ". problem-title  ."
+        ". problem ."
+        ". solution-title       ."
+        ". solution .";
+    padding: 5rem 0 2rem 0;
+    text-align: center;
+  }
+
+  .problem-title {
+    grid-area: problem-title;
+  }
+
+  .solution-title {
+    grid-area: solution-title;
+  }
+
+  .problem-title,
+  .solution-title {
+    margin: 0 auto -6.5rem;
+    z-index: 1;
+  }
+
+  .title {
+    background: #AB684D;
+    width: 10rem;
+    z-index: 2;
+  }
+
+  .problem {
+    grid-area: problem;
+  }
+
+  .solution {
+    grid-area: solution;
+  }
+
+  .problem,
+  .solution {
+    border: 0.1em solid #E0DDD7;
+    padding: 5rem 2rem 2rem;
+    margin: 0 auto 3rem;
+  }
+
+/* ----------- projects section - COMPETITIVE ANALYSIS ----------- */
+
+.comp-analysis-logos {
+  display: flex;
+  text-align: center;
+}
+
+.logo-1, .logo-2, .logo-3 {
+  flex-grow: 1;
+}
+
+.comp-analysis-logos img {
+  width: 80%;
+}
+
+
+/* ----------- projects section - USER RESEARCH ----------- */
+
+.statistic {
+  font-family: 'Playfair Display', serif;
+  font-size: 7.2rem;
+  color: #AB684D;
+}
+
+.orange {
+  color: #AB684D;
+}
+
+/* ----------- projects section - USER PERSONAS ----------- */
+
+.full-width {
+  width: 100%;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+/* ----------- projects section - BRANDING ----------- */
+
+.color-palette {
+  display: flex;
+  text-align: center;
+}
+
+.color-1,
+.color-2,
+.color-3,
+.color-4,
+.color-5
+ {
+  border-radius: 50%;
+  flex-grow: 1;
+  height:18vw;
+  margin: 1vw;
+  width: 18vw;
+}
+
+.color-1 {
+  background: #6C716B;
+}
+
+.color-2 {
+  background: #8F8D82;
+}
+
+.color-3 {
+  background: #FFF;
+}
+
+.color-4 {
+  background: #E9E7E6;
+}
+
+.color-5 {
+  background: #080F01;
+}
+
+.typography {
+  text-align: center;
+}
+
+.type-1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.type-2,
+.type-3,
+.type-4 {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+.type-3,
+.type-4 {
+  font-size: 1.2rem;
+}
+
+.type-2 {
+  font-size: 1.3rem;
+}
+
+.type-2,
+.type-3 {
+  color: #080F01;
+}
+
+.type-4 {
+  color: #6B716B;
+  text-decoration: underline;
+}
+
+.type-description {
+  font-size: 1.2rem;
+  margin: 0 0 2rem 0;
+}
+
+.colors {
+  padding: 5rem 0 0 0;
+}
+
+/* ----------- projects section - WIREFRAMES ----------- */
+
+
+.partial-width {
+  width: 100%;
+}
+
+.add-padding {
+  padding: 0 0 3rem 0;
+}
+
+
+/* ----------- homepage section - NAVIGATION ----------- */
+
+.nav {
+  grid-area: nav;
+  height: 15vh;
+  padding: 5rem 0 0 0;
+}
+
+#logo {
+  color: #91231B;
+  letter-spacing: 0.01em;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8em;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+
+/* ----------- homepage section - HERO ----------- */
+
+.hero {
+  grid-area: hero;
+  height: 55vh;
+}
+
+.hero-description  {
+  font-size: 2.4em;
+}
+
+.scroll-down-line {
+  grid-area: scroll-down-line;
+  height: 30vh;
+}
+
+.line-one {
+  border: 0.05rem solid #AB684D;
+  width: 0.05rem;
+  margin: 5rem auto;
+  height: 20vh;
+}
+
+
+
+/* ---------- homepage section - PROJECTS ---------- */
+
+.projects {
+  display: grid;
+  grid-area: projects;
+  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-areas:
+      ". projects-header  ."
+      ". case-study-title ."
+      ". case-study       .";
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.projects-header {
+  grid-area: projects-header;
+}
+
+.case-study-title {
+  grid-area: case-study-title;
+  margin: 0 auto -6.5rem;
+  z-index: 1;
+}
+
+.title {
+  background: #AB684D;
+  width: 10rem;
+  z-index: 2;
+}
+
+.case-study {
+  border: 0.1em solid #E0DDD7;
+  grid-area: case-study;
+  padding: 5rem 2rem;
+}
+
+
+
+/* ----------- homepage section - ABOUT ----------- */
+
+.about {
+  grid-area: about;
+  padding: 10rem 0 5rem;
+}
+
+#biography-intro {
+  color: #060206;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.italicized {
+  font-style: italic;
+}
+
+.photo {
+  background: none;
+  grid-area: photo;
+  margin: 0 0 -1rem 0;
+  text-align: center;
+  z-index: 2;
+}
+
+.photo img {
+    height: auto;
+    max-width: 20rem;
+    width: 80%;
+}
+
+.decorative-line-top {
+  grid-area: decorative-line-top;
+  height: 20vh;
+  z-index: 1;
+}
+
+.decorative-line-bottom {
+  grid-area: decorative-line-bottom;
+  height: 15vh;
+}
+
+.line-two-top,
+.line-two-bottom,
+.line-two-end {
+  margin: 0 auto;
+}
+
+.line-two-top {
+  border: 0.05rem solid #AB684D;
+  height: 20vh;
+  width: 0;
+}
+
+.line-two-bottom {
+  border: 0.05rem solid #E0DDD7;
+  height: 10vh;
+  width: 0;
+}
+
+.line-two-end {
+  background: #E0DDD7;
+  border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
+}
+
+
+
+/* ----------- homepage section - FOOTER ----------- */
+
+footer {
+  display: grid;
+  grid-area: footer;
+  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-areas:
+    ". footer-name ."
+    ". email ."
+    ". social-links .";
+  padding: 5rem 0 20rem;
+  text-align: center;
+}
+
+.footer-name {
+  grid-area: footer-name;
+}
+
+#email {
+  grid-area: email;
+  padding: 0 0 3.5em 0;
+}
+
+.social-links {
+  display: flex;
+  grid-area: social-links;
+}
+
+.linkedin,
+.github,
+.twitter,
+.instagram,
+.pinterest {
+  flex-grow: 1;
+}
+
+.social-links img {
+  height: auto;
+  max-width: 4rem;
+  width: 100%;
+}
+
+
+
+/* ----------- responsive - for GENERAL MOBILE ----------- */
+
+.hero-name {
+  visibility: hidden;
+}

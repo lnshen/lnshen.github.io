@@ -5,41 +5,43 @@
     <title>Ellen Shen Rotroff | Portfolio</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
+    <div class="container-home">
 
       <section class="nav">
-        <a href="project.html" class="logo">Ellen Shen Rotroff</a>
-        <input class="menu-btn" type="checkbox" id="menu-btn" />
-        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-        <ul class="nav-links">
-          <li class="projects"><a href="#projects">PROJECTS</a></li>
-          <li class="about"><a href="#about">ABOUT</a></li>
-          <li class="connect"><a href="#connect">CONNECT</a></li>
-        </ul>
+        <a href="#" id="logo">Ellen Shen Rotroff</a>
       </section>
 
       <section class="hero">
-        <h1>ELLEN SHEN ROTROFF</h1>
-        <p class="hero-description">Hi! I'm a product designer based in San Francisco - <a href="#projects">see my work<a/> or <a href="#connect">say hello</a>.</p>
-        <div class="scroll-down-line"></div>
+        <div class="hero-name">
+          <h1>ELLEN SHEN ROTROFF</h1>
+        </div>
+        <p class="hero-description">Hi! I'm a product designer based in San Francisco - <a href="#work" class="highlight">see my work</a> or <a href="#connect" class="highlight">say hello</a>.</p>
+      </section>
+
+      <section class="scroll-down-line">
+        <div class="line-one"></div>
       </section>
 
       <section class="projects">
-        <h2><a class="section-header" name="projects">PROJECTS</a></h2>
-        <div class="case-study-1">
-          <img src="images/gather/case-study-hero.jpg" alt=""></img>
-          <h3>GATHER</h3>
-          <p>An organized and collaborative wedding planning experience for modern couples</p>
-          <button type="button" class="light">View Case Study</button>
+        <a id="work"></a>
+        <h2 class="projects-header">PROJECTS</h2>
+        <div class="case-study-title">
+          <h3 class="title">GATHER</h3>
+        </div>
+        <div class="case-study">
+          <p class="light">An organized and collaborative wedding planning experience for modern couples</p>
+          <a href="project.html" class="btn light">View Case Study</a>
         </div>
       </section>
 
       <section class="about">
-        <p><span class="biography-intro"><a name="about">MY NAME IS ELLEN SHEN ROTROFF</a></span> <span class="italicized">(row-trough)</span>.</p>
-        <p>I have a business background and have worked in that capacity at companies like Google, Sears, and Cheerily. I learned a lot in those roles, like:
-          <ul>
+        <p><span id="biography-intro">MY NAME IS ELLEN SHEN ROTROFF</span> <span class="italicized">(row-trough)</span>.</p>
+        <p>I have a business background and have worked in that capacity at companies like Google, Sears, and Cheerily. I learned a lot in those roles, like:</p>
+          <ul class="bulleted-list">
             <li>how to work on huge cross-functional projects,</li>
             <li>how to prioritize product needs,</li>
             <li>how to test and then test some more,</li>
@@ -47,25 +49,32 @@
             <li>how to work hard but not be too precious with deliverables</li>
           </ul>
         <p>Of course, there were other things I did in these roles too: manage inventory, lower margins, and a lot of analyses. At my core though, I always felt most driven when I was working closest to product to create better user experiences. It became clear that if I wanted to focus on that mission, then I needed to change my role - so I made the switch to product design.</p>
-        <p>If you’re looking for a business-minded, but user-focused designer, <a href="mailto:ellen@ellenshen.com">drop me a line!</a></p>
+        <p>If you’re looking for a business-minded, but user-focused designer, <a href="mailto:ellen@ellenshen.com" class="highlight">drop me a line!</a></p>
       </section>
 
       <section class="photo">
         <img src="images/ellen.png" alt="Photo of Ellen"></img>
-        <div class="decorative-line-start"></div>
+      </section>
+
+      <section class="decorative-line-top">
+        <div class="line-two-top"></div>
+      </section>
+
+      <section class="decorative-line-bottom">
+        <div class="line-two-bottom"></div>
+        <div class="line-two-end"></div>
       </section>
 
       <footer>
-        <div class="decorative-line-end"></div>
-        <h2><a class="section-header" name="connect">Connect</a></h2>
-        <p><a href="mailto:ellen@ellenshen.com">ellen@ellenshen.com</a></p>
-        <ul class="social-links">
-          <li class="linkedin"><a href="https://www.linkedin.com/in/eshen/"><img src="images/icons8-linkedin.png" alt="LinkedIn icon" /></a></li>
-          <li class="github"><a href="https://github.com/lnshen"><img src="images/icons8-github.png" alt="Github icon" /></a></li>
-          <li class="twitter"><a href="https://twitter.com/ellenshen"><img src="images/icons8-twitter.png" alt="Twitter icon" /></a></li>
-          <li class="instagram"><a href="https://www.instagram.com/ecshen/"><img src="images/icons8-instagram_new.png" alt="Instagram icon" /></a></li>
-          <li class="pinterest"><a href="https://www.pinterest.com/ellenshen/"><img src="images/icons8-pinterest.png" alt="Pinterest icon" /></a></li>
-        </ul>
+        <h2 class="footer-name"><a id="connect"></a>Connect</h2>
+        <a href="mailto:ellen@ellenshen.com" id="email">ellen@ellenshen.com</a>
+          <ul class="social-links">
+            <li class="linkedin"><a href="https://www.linkedin.com/in/eshen/" target="_blank"><img src="images/icons8-linkedin.png" alt="LinkedIn icon" /></a></li>
+            <li class="github"><a href="https://github.com/lnshen" target="_blank"><img src="images/icons8-github.png" alt="Github icon" /></a></li>
+            <li class="twitter"><a href="https://twitter.com/ellenshen" target="_blank"><img src="images/icons8-twitter.png" alt="Twitter icon" /></a></li>
+            <li class="instagram"><a href="https://www.instagram.com/ecshen/" target="_blank"><img src="images/icons8-instagram_new.png" alt="Instagram icon" /></a></li>
+            <li class="pinterest"><a href="https://www.pinterest.com/ellenshen/" target="_blank"><img src="images/icons8-pinterest.png" alt="Pinterest icon" /></a></li>
+          </ul>
       </footer>
 
     </div>
