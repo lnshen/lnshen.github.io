@@ -59,86 +59,6 @@ section.portfolio {
 }
 
 
-/* ---------- grid stuff below - save for responsive work ----------- */
-
-/* .container-project {
-  background-color: rgba(241, 236, 234, 1);
-  margin: 0 5rem;
-  display: grid;
-  grid-template-columns: 1fr 6fr 1fr;
-  grid-template-areas:
-    "proj-nav proj-nav proj-nav"
-    "proj-hero proj-hero proj-hero"
-    ". role-section ."
-    "overview overview overview"
-    ". comp-analysis ."
-    "user-research user-research user-research"
-    ". personas ."
-    ". user-stories ."
-    "wireframes wireframes wireframes"
-    ". user-testing ."
-    "branding branding branding"
-    "mockups mockups mockups"
-    ".prototype prototype prototype"
-    ". closing-thoughts ."
-    "footer footer footer";
-
-} */
-
-/* .proj-nav {
-  grid-area: proj-nav;
-}
-.proj-hero {
-  grid-area: proj-hero;
-}
-
-.role-section {
-  grid-area: role-section;
-}
-
-.overview {
-  grid-area: overview;
-}
-
-.comp-analysis {
-  grid-area: comp-analysis;
-}
-
-.user-research {
-  grid-area: user-research;
-}
-
-.personas {
-  grid-area: personas;
-}
-
-.user-stories {
-  grid-area: user-stories;
-}
-
-.wireframes {
-  grid-area: wireframes;
-}
-
-.user-testing {
-  grid-area: user-testing;
-}
-
-.branding {
-  grid-area: branding;
-}
-
-.mockups {
-  grid-area: mockups;
-}
-
-.prototype {
-  grid-area: prototype;
-}
-
-.closing-thoughts {
-  grid-area: closing-thoughts;
-} */
 
 /* ----------- background colors ----------- */
 
@@ -328,8 +248,14 @@ a.dark:focus {
   text-align: center;
 }
 
+.role-text {
+  max-width: 45rem;
+  margin: 0 auto;
+}
+
 .role-text h2 {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 40rem;
 }
 
 /* ----------- projects section - OVERVIEW ----------- */
@@ -421,6 +347,10 @@ a.dark:focus {
 
 /* ----------- projects section - BRANDING ----------- */
 
+.moodboard {
+  padding-bottom: 5rem;
+}
+
 .color-palette {
   display: flex;
   text-align: center;
@@ -486,9 +416,10 @@ a.dark:focus {
   font-size: 1.3rem;
 }
 
+.type-1,
 .type-2,
-.type-3 {
-  color: #080F01;
+.type-4 {
+  color: #060F00;
 }
 
 .type-4 {
@@ -497,12 +428,7 @@ a.dark:focus {
 }
 
 .type-description {
-  font-size: 1.2rem;
-  margin: 0 0 2rem 0;
-}
-
-.colors {
-  padding: 5rem 0 0 0;
+  font-size: 1.4rem;
 }
 
 /* ----------- projects section - WIREFRAMES ----------- */
@@ -516,6 +442,22 @@ a.dark:focus {
   padding: 0 0 3rem 0;
 }
 
+.wireframes a {
+  margin-bottom: 5rem;
+}
+
+.wireframes-img {
+  display: none;
+}
+
+.mockups-img,
+.prototype-img {
+  width: 100%;
+}
+
+.prototype-img {
+  max-width: 450px;
+}
 
 /* ----------- homepage section - NAVIGATION ----------- */
 
@@ -578,9 +520,17 @@ a.dark:focus {
   grid-template-columns: 1fr 10fr 1fr;
   grid-template-areas:
       ". projects-header  ."
-      ". case-study-title ."
-      ". case-study       .";
-  padding: 8rem 0;
+      ". case-outer       .";
+  padding: 5rem 0 8rem 0;
+  text-align: center;
+}
+
+.case-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+      "case-title"
+      "case-study";
   text-align: center;
 }
 
@@ -588,8 +538,20 @@ a.dark:focus {
   grid-area: projects-header;
 }
 
-.case-study-title {
-  grid-area: case-study-title;
+.case-outer {
+  grid-area: case-outer;
+}
+
+.case-img {
+  display: none;
+}
+
+.case-inner a {
+  text-decoration: none;
+}
+
+.case-title {
+  grid-area: case-title;
   margin: 0 auto -6.5rem;
   z-index: 1;
 }
@@ -606,6 +568,9 @@ a.dark:focus {
   padding: 5rem 2rem;
 }
 
+.case-title-hover {
+  display: none;
+}
 
 
 /* ----------- homepage section - ABOUT ----------- */
@@ -687,8 +652,13 @@ footer {
     ". footer-name ."
     ". email ."
     ". social-links .";
-  padding: 5rem 0 20rem;
+  padding: 10rem 0;
   text-align: center;
+  margin-bottom: 0rem;
+}
+
+.footer-home {
+  padding-top: 5rem;
 }
 
 .footer-name {
@@ -719,102 +689,46 @@ footer {
   width: 100%;
 }
 
-/* ----------- responsive - for HOMEPAGE MOBILE ----------- */
 
 
-/* ----------- responsive - for HOMEPAGE DESKTOP ----------- */
+/* ----------- (TABLET - SMALL) responsive ----------- */
 
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 575px) {
 
-  #logo {
-    visibility: hidden;
+  /*--- home ---*/
+
+
+  .container-home {
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+
+    }
+
+  .projects {
+    grid-template-columns: 1fr 5fr 1fr;
+    padding: 5rem 0 8rem 0;
   }
 
-  .hero-name {
-    visibility: visible;
+  .case-desc {
+    width: 80%;
+    margin: 0 auto;
   }
 
-.hero {
-  width: 75%;
-}
+  a.btn,
+  a.dark {
+    max-width: 50rem;
+  }
 
-p {
-  font-family: "Metropolis Regular";
-}
+  /*--- project ---*/
 
-.container-home {
-  display: grid;
-  grid-template-columns: 2fr 4fr 4fr 2fr;
-  grid-template-areas:
-  "nav                    nav                    nav                    nav"
-  ".                      hero                   hero                   ."
-  ".                      scroll-down-line       scroll-down-line       ."
-  "projects               projects               projects               projects"
-  ".                      about                  about                  ."
-  ".                      photo                  photo                  ."
-  "footer                 footer                 footer                 footer";
-}
+  a.dark {
+    max-width: 45rem;
+    margin: 0 auto;
+  }
 
-.case-study {
-  width: 80%;
-  margin: 0 auto;
-}
-
-.case-study-content {
-  width: 50%;
-  margin: 0 auto;
-}
-
-a.btn {
-  width: 40%;
-}
-
-.decorative-line-top,
-.decorative-line-bottom {
- visibility: hidden
-}
-
-.about {
-  display: flex;
-  padding-bottom: 0;
-}
-
-.about-col-1 {
-  margin-right: 2rem;
-}
-
-.about-col-2 {
-  margin-left:2rem;
-}
-
-.about-col-1,
-.about-col-2 {
-  width: 100%;
-}
-
-.photo {
-  margin-bottom: -10rem;
-}
-
-footer {
-  padding-top: 15rem;
-}
-
-.social-links {
-  width: 50%;
-  margin: 0 auto;
-}
-
-
-
-
-
-/* ----------- responsive - for PROJECT DESKTOP ----------- */
-
-@media screen and (min-width: 50em) {
-
-  section.portfolio {
-    padding: 5rem 10%;
+  .product-summary {
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .proj-hero-img {
@@ -822,10 +736,250 @@ footer {
     width: auto;
   }
 
-  .proj-hero {
-    width: 80%;
+  section.portfolio {
+    padding: 5rem 12%;
+  }
+
+  .overview {
+      display: grid;
+      grid-template-columns: 1fr 8fr 1fr;
+      grid-template-areas:
+          ". problem-title  ."
+          ". problem ."
+          ". solution-title       ."
+          ". solution .";
+      padding: 5rem 0 2rem 0;
+      text-align: center;
+    }
+
+    .wireframes a {
+      margin-bottom: 5rem;
+    }
+
+}
+
+
+/* ----------- (TABLET - LARGE) responsive ----------- */
+
+@media screen and (min-width: 900px) and (max-width: 1198px) {
+
+  .moodboard {
+    padding: 0 20% 5rem 20%;
+  }
+
+  .colors {
+    padding: 0 20%;
     margin: 0 auto;
   }
+
+  .color-1,
+  .color-2,
+  .color-3,
+  .color-4,
+  .color-5 {
+    border-radius: 0;
+    height: 10rem;
+  }
+
+}
+
+
+@media screen and (min-width: 900px) {
+
+
+  /*--- home ---*/
+
+  .decorative-line-top,
+  .decorative-line-bottom {
+    display: none;
+  }
+
+  .about {
+    display: flex;
+    padding-bottom: 0;
+  }
+
+  .about-col-1 {
+    margin-right: 2rem;
+  }
+
+  .about-col-2 {
+    margin-left:2rem;
+  }
+
+  .about-col-1,
+  .about-col-2 {
+    width: 100%;
+  }
+
+  .photo {
+    margin-bottom: -10rem;
+  }
+
+  .footer-home {
+    padding-top: 15rem;
+  }
+
+  .social-links {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  /*--- project ---*/
+
+  section.portfolio {
+    padding: 5rem 20%;
+  }
+
+  .overview {
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+      grid-template-areas:
+          ". problem-title  ."
+          ". problem ."
+          ". solution-title       ."
+          ". solution .";
+      padding: 5rem 0 2rem 0;
+      text-align: center;
+    }
+
+  .personas {
+    background-image: url(/images/gather/personas.jpg);
+    background-size: cover;
+    height: 90vh;
+  }
+
+  .personas-image {
+    display: none;
+  }
+
+  .user-stories {
+    background-image: url(/images/gather/user-flows-2.png);
+    height: 95vh;
+    background-size: cover;
+  }
+
+  .lower {
+    margin-top: 7rem;
+  }
+
+  .user-flows {
+    display: none;
+  }
+
+}
+
+
+/* ----------- (DESKTOP) responsive - HOMEPAGE ----------- */
+
+@media screen and (min-width: 1199px) {
+
+
+  .container-home {
+    display: grid;
+    grid-template-columns: 2fr 4fr 4fr 2fr;
+    grid-template-areas:
+    "nav                    nav                    nav                    nav"
+    ".                      hero                   hero                   ."
+    ".                      scroll-down-line       scroll-down-line       ."
+    "projects               projects               projects               projects"
+    ".                      about                  about                  ."
+    ".                      photo                  photo                  ."
+    "footer                 footer                 footer                 footer";
+  }
+
+/* ----------- (DESKTOP) responsive - HOMEPAGE - PROJECTS ----------- */
+
+  .projects {
+    display: block;
+  }
+
+  .case-outer {
+    height: 45vh;
+    min-height: 30rem;
+    width: 67%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .case-outer:hover .case-img {
+    opacity: 0.1;
+  }
+
+  .case-outer:hover .case-inner {
+    opacity: 1;
+  }
+
+  .case-img {
+    display: block;
+    opacity: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: auto;
+    width: 100%;
+    transform: translate(-50%,-50%);
+  }
+
+  .case-inner {
+    margin: 0 auto;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    transition: .5s ease;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+
+  .case-title {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  .case-study {
+    height: 45vh;
+    min-height: 30rem;
+    width: 100%;
+  }
+
+  .case-title-hover {
+    display: block;
+    background-color: transparent;
+  }
+
+  .case-desc {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+/* ----------- (DESKTOP) responsive - PROJECT ----------- */
+
+  section.portfolio {
+    padding: 5rem 17%;
+  }
+
+  section.rm-portfolio {
+    padding: 0;
+  }
+
+  .left-content {
+    padding-right: 3rem;
+    width: 50%;
+  }
+
+  a.btn {
+    width: 100%;
+  }
+
+/* ----------- (DESKTOP) responsive - PROJECT - HERO ----------- */
+
+  .product-summary {
+    max-width: 70rem;
+  }
+
+/* ----------- (DESKTOP) responsive - PROJECT - ROLE ----------- */
 
   .role-section {
     display: flex;
@@ -838,28 +992,53 @@ footer {
     margin: 0 auto;
   }
 
-  .overview {
-    display: flex;
+  .role-text h2 {
+    padding-bottom: 1rem;
   }
+
+/* ----------- (DESKTOP) responsive - PROJECT - OVERVIEW ----------- */
+
+  .overview {
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr 1fr;
+    grid-template-areas:
+      ". problem-title solution-title ."
+      ". problem       solution       .";
+    padding: 5rem 0 2rem 0;
+    text-align: center;
+  }
+
+  .problem,
+  .solution {
+    width: 95%;
+  }
+
+  .overview-text {
+    width: 80%;
+    margin: 0 auto 2rem auto;
+  }
+
+/* ----------- (DESKTOP) responsive - PROJECT - COMP ANALYSIS ----------- */
 
   .comp-analysis {
     display: flex;
-    background: green;
-  }
-
-  .comp-analysis-text,
-  .comp-analysis-logos {
-    width: 40%;
-    margin: 0 auto;
   }
 
   .comp-analysis-logos {
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
+    width: 50%;
   }
 
   .comp-analysis-logos img {
     width: 40%;
+  }
+
+/* ----------- (DESKTOP) responsive - PROJECT - USER RESEARCH ----------- */
+
+  .user-research {
+    margin: 0 auto;
   }
 
   .user-research-content {
@@ -872,6 +1051,160 @@ footer {
   }
 
   .stat-desc {
-    padding-left: 2rem;
+    padding: 2rem 0 0 2rem;
   }
+
+/* ----------- (DESKTOP) responsive - PROJECT - WIREFRAMES ----------- */
+
+  .container-wireframes {
+    display: grid;
+    grid-template-columns: 2fr 4fr 4fr 2fr;
+    grid-template-areas:
+    ". wireframes-img wireframes   ."
+    ". wireframes-img user-testing ."
+    ". wireframes-img .            .";
+    padding: 5rem 0;
+  }
+
+  .wireframes {
+    grid-area: wireframes;
+    margin-left: 3rem;
+  }
+
+  .wireframes img {
+    display: none;
+  }
+
+  .wireframes-img {
+    display: inline;
+    grid-area: wireframes-img;
+    width: 100%;
+  }
+
+/* ----------- (DESKTOP) responsive - PROJECT - USER TESTING ----------- */
+
+  .user-testing {
+    background-color: rgba(241, 236, 234, 1);
+    grid-area: user-testing;
+    margin: 5rem 0 0 3rem;
+  }
+
+
+/* ----------- (DESKTOP) responsive - PROJECT - BRANDING ----------- */
+
+  .container-branding {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 2fr 4fr 4fr 2fr;
+    grid-template-areas:
+    ". branding  type      ."
+    ". colors    type      ."
+    ". moodboard moodboard .";
+    padding: 5rem 0;
+  }
+
+  .branding {
+    background-color: #fff;
+    grid-area: branding;
+    padding-right: 2rem;
+  }
+
+  .colors {
+    background-color: #fff;
+    grid-area: colors;
+  }
+
+  .type {
+    background-color: #fff;
+    grid-area: type;
+  }
+
+  .moodboard {
+    background-color: #fff;
+    grid-area: moodboard;
+  }
+
+  .color-palette {
+    display: flex;
+    max-width: 30rem;
+    text-align: center;
+  }
+
+  .color-1,
+  .color-2,
+  .color-3,
+  .color-4,
+  .color-5
+   {
+    border-radius: 0%;
+    height: 4rem;
+    margin: 0.5rem;
+    width: 4rem;
+  }
+
+  .color-3 {
+    border: 0.1rem solid #E9E7E6;
+  }
+
+  .typography {
+    text-align: left;
+    padding-left: 4rem;
+  }
+
+  .type-1 {
+    font-size: 2.4rem;
+  }
+
+  .type-3,
+  .type-4 {
+    font-size: 1.4rem;
+  }
+
+  .type-2 {
+    font-size: 1.8rem;
+
+  }
+
+  .type-description {
+    font-size: 1.2rem;
+    margin: 0 0 1rem 0;
+  }
+
+/* ----------- (DESKTOP) responsive - PROJECT - MOCKUPS ----------- */
+
+  .mockups {
+    background-color: rgba(241, 236, 234, 1);
+    display: flex;
+  }
+
+  .mockups-img {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+/* ----------- (DESKTOP) responsive - PROJECT - PROTOTYPE ----------- */
+
+  .prototype {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #fff;
+  }
+
+  .prototype-summary {
+    margin: 0 auto;
+    padding-left: 3rem;
+    width: 50%;
+  }
+
+  .prototype-img {
+    height: 100%;
+    width: 50%;
+  }
+
+/* ----------- (DESKTOP) responsive - PROJECT - CLOSING THOUGHTS ----------- */
+
+  .closing-thoughts {
+    background-color: rgba(241, 236, 234, 1);
+  }
+
 }
