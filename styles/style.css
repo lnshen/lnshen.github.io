@@ -1179,7 +1179,9 @@ footer {
 
   .mockups-img {
     margin: 0 auto;
+    height: 100%;
     width: 50%;
+    
   }
 
 /* ----------- (DESKTOP) responsive - PROJECT - PROTOTYPE ----------- */
