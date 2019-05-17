@@ -332,7 +332,7 @@ a.dark:focus {
 }
 
 .orange {
-  color: #AB684D;
+  background-color: rgba(171, 104, 77, 0.2);
 }
 
 /* ----------- projects section - USER PERSONAS ----------- */
@@ -450,14 +450,33 @@ a.dark:focus {
   display: none;
 }
 
-.mockups-img,
-.prototype-img {
+.option {
+  margin: 0 auto;
+}
+
+.center {
+  text-align: center;
+}
+
+/* ----------- projects section - MOCKUPS & PROTOTYPE ----------- */
+
+.product-screenshot {
+  padding-bottom: 3rem;
   width: 100%;
+}
+
+.option img {
+  padding-bottom: 1rem;
 }
 
 .prototype-img {
   max-width: 450px;
 }
+
+.desktop-img {
+  display: none;
+}
+
 
 /* ----------- homepage section - NAVIGATION ----------- */
 
@@ -542,7 +561,8 @@ a.dark:focus {
   grid-area: case-outer;
 }
 
-.case-img {
+.case-img,
+.proj-hero-logo {
   display: none;
 }
 
@@ -918,8 +938,26 @@ footer {
     left: 50%;
     top: 50%;
     height: auto;
-    width: 100%;
-    transform: translate(-50%,-50%);
+    width: 120%;
+    transform: translate(-55%,-50%);
+  }
+
+  .case-outer .proj-hero-logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 15rem;
+    opacity: 1;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 45%;
+
+  }
+
+  .case-outer:hover .proj-hero-logo {
+    opacity: 0;
   }
 
   .case-inner {
@@ -945,8 +983,10 @@ footer {
   }
 
   .case-title-hover {
-    display: block;
     background-color: transparent;
+    display: block;
+    margin: 1rem;
+    visibility: hidden;
   }
 
   .case-desc {
@@ -1174,22 +1214,34 @@ footer {
 
   .mockups {
     background-color: rgba(241, 236, 234, 1);
+  }
+
+  .side-by-side {
     display: flex;
   }
 
-  .mockups-img {
-    margin: 0 auto;
-    height: 100%;
-    width: 50%;
-    
+  .img-1,
+  .img-2 {
+    width: 100%;
+  }
+  .img-1 {
+    padding-right: 2rem;
+  }
+
+  .img-2 {
+    padding-left: 2rem;
+  }
+
+  .preference-test {
+    background-color: #fff;
   }
 
 /* ----------- (DESKTOP) responsive - PROJECT - PROTOTYPE ----------- */
 
   .prototype {
+    background-color: rgba(241, 236, 234, 1);
     display: flex;
     flex-direction: row-reverse;
-    background-color: #fff;
   }
 
   .prototype-summary {
@@ -1203,10 +1255,19 @@ footer {
     width: 50%;
   }
 
+  .mobile-img {
+    display: none;
+  }
+
+  .desktop-img {
+    display: block;
+  }
+
+
 /* ----------- (DESKTOP) responsive - PROJECT - CLOSING THOUGHTS ----------- */
 
   .closing-thoughts {
-    background-color: rgba(241, 236, 234, 1);
+    background-color: #fff;
   }
 
 }

@@ -15,7 +15,7 @@
     <title>Ellen Shen Rotroff | Portfolio</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
   </head>
@@ -29,7 +29,7 @@
       <section class="proj-hero portfolio">
         <img src="images/gather/hero-2.png" class="proj-hero-img" alt="Laptop screen displaying product"/>
         <br>
-        <img src="images/gather/logo.png" class="proj-hero-logo" alt="Logo for Gather"/>
+        <img src="images/gather/logo-2.png" class="proj-hero-logo" alt="Logo for Gather"/>
         <p class="product-summary">Wedding planning is a team effort that requires more than just expert advice. Gather provides all the tools that couples need to plan their wedding together.</p>
         <a href="https://www.figma.com/proto/2rEueA6WJoBsgJJhmb0EjC/UX-Intensive-High-Fidelity-Prototype?node-id=0%3A1&scaling=scale-down-width" target="_blank" class="btn dark">See Prototype</a>
       </section>
@@ -91,7 +91,7 @@
       <section class="personas portfolio bg-white">
         <div class="left-content">
           <h2 class="dark">PERSONAS</h2>
-          <p><span class="bold">Jessica (29)</span> and <span class="bold">David (32)</span> are planning their wedding, tech savvy and use cloud productivity tools regularly.</p>
+          <p><span class="bold">Jessica (29)</span> and <span class="bold">David (32)</span> are tech savvy and use cloud productivity tools regularly. Their goal is to collaborate on wedding planning but they have bits and pieces of their planning all stored in different places.</p>
         </div>
       </section>
 
@@ -101,7 +101,7 @@
 
       <section class="user-stories portfolio bg-white">
         <div class="left-content lower">
-          <h2 class="dark">USER STORIES</h2>
+          <h2 class="dark">USER STORIES & FLOWS</h2>
           <p>We prioritized user stories around the popular planning actions:</p>
           <ul class="bulleted-list">
             <li>I want to save a website or article for later</li>
@@ -136,7 +136,7 @@
             <li>Organize an item</li>
             <li>Share an item</li>
           </ul>
-          <p>We discovered that the project-based workflow made completing these tasks unintuitive. In addition, because our language was so generic, users did not immediately see the differentiation between Gather and existing products like Google Drive.</p>
+          <p>We discovered that the project-based workflow made completing these tasks unintuitive - participants ranked them difficult to complete. In addition, because our language was so generic, users did not immediately see the differentiation between Gather and existing products like Google Drive.</p>
           <p>To address these concerns, we removed the project creation step from the workflow and focused all language on wedding planning specifically.</p>
         </section>
 
@@ -186,14 +186,34 @@
       </div>
 
       <section class="mockups portfolio bg-white">
-        <div class="left-content">
+        <div>
           <h2 class="dark">MOCKUPS</h2>
           <p>We applied our branding work and wireframe feedback to high fidelity mockups:</p>
         </div>
-        <img src="images/gather/mockups.png" class="mockups-img" alt="Side by side view of wireframes transitioning to high-fidelity mockup" />
+        <div class="side-by-side">
+          <img src="images/gather/mockups-4.png" class="product-screenshot img-1" alt="Side by side view of dashboard wireframe and high-fidelity mockup" />
+          <img src="images/gather/mockups-2.png" class="product-screenshot img-2" alt="Side by side view of add item wireframe and high-fidelity mockup" />
+        </div>
       </section>
 
-      <section class="prototype portfolio">
+      <section class="preference-test portfolio">
+        <div>
+          <h2 class="dark">PREFERENCE TESTS</h2>
+          <p>Another avenue we used for quick design feedback was preference testing:</p>
+        </div>
+        <div class="side-by-side">
+          <div class="option">
+            <img src="images/gather/pref-test-1.png" class="product-screenshot img-1" alt="Desktop design A: white navigation bar" />
+            <p class="italicized center">67% of testers prefer this design</p>
+          </div>
+          <div class="option">
+            <img src="images/gather/pref-test-2.png" class="product-screenshot img-2" alt="Desktop design B: transparent navigation bar" />
+            <p class="italicized center">33% of testers prefer this design</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="prototype portfolio bg-white">
         <div class="prototype-summary">
           <h2 class="dark">PROTOTYPE</h2>
           <p>We made additional design adjustments based on preference tests and created a high fidelity prototype for a second round of user testing. Participants were asked to complete the following tasks:</p>
@@ -203,12 +223,14 @@
             <li>Share an item</li>
           </ul>
           <p>With the wedding planning focus, this prototype tested much better with users. All participants breezed through the tasks and ranked them easy to complete.</p>
-          <p>For our final product, we addressed feedback on some minor elements that still needed work, such as reorganizing the folder list in the dashboard view:</p>
+          <p>For our final product, we addressed feedback on some minor elements that still needed work, such as reorganizing the folder list in the dashboard view.</p>
+          <img src="images/gather/prototype.png" class="product-screenshot prototype-img mobile-img" alt="Side by side of navigation bar re-ordered alphabetically" />
+          <a href="https://www.figma.com/proto/2rEueA6WJoBsgJJhmb0EjC/UX-Intensive-High-Fidelity-Prototype?node-id=0%3A1&scaling=scale-down-width" target="_blank" class="btn dark">See Final Prototype</a>
         </div>
-        <img src="images/gather/prototype.png" class="prototype-img" alt="Side by side of navigation bar re-ordered alphabetically" />
+        <img src="images/gather/prototype.png" class="product-screenshot prototype-img desktop-img" alt="Side by side of navigation bar re-ordered alphabetically" />
       </section>
 
-      <section class="closing-thoughts portfolio bg-white">
+      <section class="closing-thoughts portfolio">
           <h2 class="dark">CLOSING THOUGHTS</h2>
           <p>We started this project by attempting to create a catch-all project planning product. However, by focusing the use case for wedding planning only, we were able to deliver a tighter product that is more intuitive to use.</p>
           <p>In a space as crowded as the wedding industry, wedding planning is still a disorganized experience with few websites stepping up to solve the problem. Gather meets the need for a single destination where modern couples have all the tools to plan their wedding together.</p>
