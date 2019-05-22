@@ -1,3 +1,27 @@
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 900px) {
+
+
+
+}
+
+
+
+@media screen and (min-width: 1199px) {
+
+
+
+}
+
+
 @font-face {
     font-family: 'Metropolis Regular';
     src: url("/fonts/Metropolis-Regular.ttf");
@@ -6,6 +30,16 @@
 @font-face {
     font-family: 'Metropolis SemiBold';
     src: url('/fonts/Metropolis-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Metropolis Regular Italic';
+    src: url('/fonts/Metropolis-RegularItalic.otf');
+}
+
+@font-face {
+    font-family: 'Metropolis SemiBold Italic';
+    src: url('/fonts/Metropolis-SemiBoldItalic.otf');
 }
 
 /* ---------- universal ---------- */
@@ -244,7 +278,7 @@ a.dark:focus {
 
 /* ----------- projects section - ROLE ----------- */
 
-.role, .deliverables, .tools {
+.role, .deliverables, .tools, .duration {
   text-align: center;
 }
 
@@ -309,26 +343,84 @@ a.dark:focus {
 
 /* ----------- projects section - COMPETITIVE ANALYSIS ----------- */
 
-.comp-analysis-logos {
-  display: flex;
+.brand-logo {
   text-align: center;
+  height: 7rem;
+  padding-top: 2rem;
 }
 
-.logo-1, .logo-2, .logo-3 {
-  flex-grow: 1;
+#ww,
+#zola  {
+  height: 4rem;
 }
 
-.comp-analysis-logos img {
-  width: 80%;
+#knot {
+height: 4.8rem;
+}
+
+.brand-comparison {
+  margin: 5rem 0 0 0;
+}
+
+.brand {
+  background: rgba(224, 221, 215, 0.3);
+  padding: 2rem;
+}
+
+.brand-1,
+.brand-2 {
+  margin-bottom: 1rem;
+}
+
+.container-branding section.portfolio {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.container-branding h2 {
+  padding-top: 5rem;
+}
+
+.brand-desc {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  grid-template-areas:
+  'thumbup   pro'
+  'thumbdown con';
+  padding: 1rem 2rem;
+}
+
+.thumbup {
+  grid-area: thumbup;
+  margin-right: 1rem;
+}
+
+.thumbdown {
+  grid-area: thumbdown;
+  margin-right: 1rem;
+}
+
+.thumbup img,
+.thumbdown img {
+  max-width: 2rem;
+}
+
+.pro {
+  grid-area: pro;
+}
+
+.con {
+  grid-area: con;
 }
 
 
 /* ----------- projects section - USER RESEARCH ----------- */
 
 .statistic {
+  color: #AB684D;
   font-family: 'Playfair Display', serif;
   font-size: 7.2rem;
-  color: #AB684D;
+  margin: 0;
 }
 
 .orange {
@@ -345,15 +437,23 @@ a.dark:focus {
   font-family: 'Metropolis SemiBold', sans-serif;
 }
 
+.i-bold {
+  font-family: 'Metropolis SemiBold Italic', sans-serif;
+}
+
 /* ----------- projects section - BRANDING ----------- */
 
-.moodboard {
-  padding-bottom: 5rem;
+.branding {
+  margin-bottom: 5rem;
 }
 
 .color-palette {
   display: flex;
   text-align: center;
+}
+
+.colors {
+  padding: 0 8%;
 }
 
 .color-1,
@@ -362,11 +462,11 @@ a.dark:focus {
 .color-4,
 .color-5
  {
-  border-radius: 50%;
+  border-radius: 0%;
   flex-grow: 1;
-  height:18vw;
+  height: 10vw;
   margin: 1vw;
-  width: 18vw;
+  width: 10vw;
 }
 
 .color-1 {
@@ -389,7 +489,16 @@ a.dark:focus {
   background: #080F01;
 }
 
+.type {
+  margin: 0 auto;
+  text-align: center;
+}
+
 .typography {
+  border: 1px solid #060206;
+  margin: 5rem auto;
+  padding-top: 3rem;
+  width: 80%;
   text-align: center;
 }
 
@@ -461,8 +570,13 @@ a.dark:focus {
   width: 100%;
 }
 
+.side {
+  text-align: center;
+}
+
 .side img {
   padding-bottom: 1rem;
+  max-width: 500px;
 }
 
 .prototype-img {
@@ -503,6 +617,7 @@ a.dark:focus {
   grid-area: hero;
   height: 55vh;
   justify-content: flex-end;
+  max-width: 600px;
   width: 75%;
 }
 
@@ -603,7 +718,7 @@ a.dark:focus {
 }
 
 .italicized {
-  font-style: italic;
+  font-family: 'Metropolis Regular Italic', sans-serif;
 }
 
 .photo {
@@ -780,7 +895,9 @@ footer {
 @media screen and (min-width: 900px) and (max-width: 1198px) {
 
   .moodboard {
-    padding: 0 20% 5rem 20%;
+    /* padding: 0 20% 5rem 20%; */
+    max-height: 90vh;
+    overflow: hidden;
   }
 
   .colors {
@@ -795,6 +912,10 @@ footer {
   .color-5 {
     border-radius: 0;
     height: 10rem;
+  }
+
+  .typography {
+    width: 60%;
   }
 
 }
@@ -859,6 +980,37 @@ footer {
       text-align: center;
     }
 
+    .user-research {
+      margin: 0 auto;
+    }
+
+    .user-research-content {
+      display: flex;
+      width: 100%;
+    }
+
+    .stat-div {
+      padding-right: 2rem;
+    }
+
+    .stat-desc {
+      padding-top: 2.5rem;
+      padding-bottom: 0;
+      max-width: 60rem;
+    }
+
+    .stat-1 {
+      padding-top: 2rem;
+    }
+
+    .stat-2 {
+      padding-top: 2.5rem;
+    }
+
+    .stat-3 {
+      padding-top: 3rem;
+    }
+
   .personas {
     background-image: url(/images/gather/personas.jpg);
     background-size: cover;
@@ -869,18 +1021,24 @@ footer {
     display: none;
   }
 
-  .user-stories {
-    background-image: url(/images/gather/user-flows-2.png);
-    height: 95vh;
-    background-size: cover;
+  .personas-text {
+    display: flex;
   }
 
-  .lower {
-    margin-top: 7rem;
+  .persona-1 {
+    width: 50%;
+    padding-right: 2rem;
+  }
+
+  .persona-2 {
+    width: 50%;
+    padding-left: 2rem;
   }
 
   .user-flows {
-    display: none;
+    /* display: none; */
+    max-height: 80vh;
+    overflow: hidden;
   }
 
 }
@@ -921,6 +1079,7 @@ footer {
 
   .case-outer:hover .case-img {
     opacity: 0.1;
+    transition: 0.5s ease;
   }
 
   .case-outer:hover .case-inner {
@@ -1009,6 +1168,7 @@ footer {
     width: 100%;
   }
 
+
 /* ----------- (DESKTOP) responsive - PROJECT - HERO ----------- */
 
   .product-summary {
@@ -1023,8 +1183,9 @@ footer {
 
   .role,
   .deliverables,
-  .tools {
-    width: 30%;
+  .tools,
+  .duration {
+    width: 22%;
     margin: 0 auto;
   }
 
@@ -1056,38 +1217,46 @@ footer {
 
 /* ----------- (DESKTOP) responsive - PROJECT - COMP ANALYSIS ----------- */
 
-  .comp-analysis {
+  .brand-comparison {
     display: flex;
   }
 
-  .comp-analysis-logos {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    width: 50%;
+  .brand-desc {
+  padding: 2rem 0;
   }
 
-  .comp-analysis-logos img {
-    width: 40%;
+  .brand {
+  width: 33%;
   }
 
-/* ----------- (DESKTOP) responsive - PROJECT - USER RESEARCH ----------- */
-
-  .user-research {
-    margin: 0 auto;
+  .brand-1,
+  .brand-2 {
+    margin-bottom: 0;
+    margin-right: 0.5rem;
   }
 
-  .user-research-content {
-    display: flex;
-    width: 100%;
+  .brand-2,
+  .brand-3 {
+    margin-left: 0.5em;
   }
 
-  .stat-div {
-    padding-right: 2rem;
+/* ----------- (DESKTOP) responsive - PROJECT - USER STORIES ----------- */
+
+  .user-stories {
+    background-image: url(/images/gather/user-flows-2.jpg);
+    background-size: cover;
   }
 
-  .stat-desc {
-    padding: 2rem 0 0 2rem;
+  .user-stories .lower {
+    margin-bottom: 5rem;
+  }
+
+  .lower {
+    margin-top: 7rem;
+  }
+
+  .user-flows {
+    display: none;
   }
 
 /* ----------- (DESKTOP) responsive - PROJECT - WIREFRAMES ----------- */
@@ -1133,10 +1302,27 @@ footer {
     display: grid;
     grid-template-columns: 2fr 4fr 4fr 2fr;
     grid-template-areas:
-    ". branding  type      ."
-    ". colors    type      ."
-    ". moodboard moodboard .";
+    ". branding        branding      ."
+    ". logo-brainstorm logo-brainstorm ."
+    ". moodboard moodboard ."
+    ". color-text      colors      ."
+    ". type-text type .";
     padding: 5rem 0;
+  }
+
+  .color-text {
+    background-color: #fff;
+    grid-area: color-text;
+  }
+
+  .type-text {
+    background-color: #fff;
+    grid-area: type-text;
+  }
+
+  .logo-brainstorm {
+    background-color: #fff;
+    grid-area: logo-brainstorm;
   }
 
   .branding {
@@ -1148,11 +1334,20 @@ footer {
   .colors {
     background-color: #fff;
     grid-area: colors;
+    padding-left: 3.5rem;
   }
 
   .type {
     background-color: #fff;
     grid-area: type;
+    margin-top: 5rem;
+  }
+
+  .typography {
+    width: 100%;
+    border: none;
+    padding: 0%;
+    margin: 0%;
   }
 
   .moodboard {
@@ -1162,7 +1357,8 @@ footer {
 
   .color-palette {
     display: flex;
-    max-width: 30rem;
+    flex-direction: column;
+    margin-top: 5rem;
     text-align: center;
   }
 
@@ -1173,18 +1369,13 @@ footer {
   .color-5
    {
     border-radius: 0%;
-    height: 4rem;
-    margin: 0.5rem;
-    width: 4rem;
+    height: 5rem;
+    width: 100%;
+    margin: 0;
   }
 
   .color-3 {
     border: 0.1rem solid #E9E7E6;
-  }
-
-  .typography {
-    text-align: left;
-    padding-left: 4rem;
   }
 
   .type-1 {
