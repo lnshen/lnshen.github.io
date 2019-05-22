@@ -11,27 +11,27 @@
       gtag('config', 'UA-140252469-1');
     </script>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1">
     <title>Ellen Shen Rotroff | Portfolio</title>
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
     <div class="container-project">
 
       <section class="nav">
-        <a href="index.html"><img src="images/portfolio-logo.png"/></a>
+        <a href="index.html"><img src="images/logo.png"/></a>
       </section>
 
       <section class="proj-hero portfolio">
-        <img src="images/gather/hero-2.png" class="proj-hero-img" alt="Laptop screen displaying product"/>
+        <img src="images/gather/hero.png" class="proj-hero-img" alt="Laptop screen displaying product"/>
         <br>
-        <img src="images/gather/logo-2.png" class="proj-hero-logo" alt="Logo for Gather"/>
+        <img src="images/gather/logo.png" class="proj-hero-logo" alt="Logo for Gather"/>
         <p class="product-summary">Wedding planning is a team effort that requires more than just expert advice. Gather provides all the tools that couples need to plan their wedding together.</p>
-        <a href="https://www.figma.com/proto/2rEueA6WJoBsgJJhmb0EjC/UX-Intensive-High-Fidelity-Prototype?node-id=0%3A1&scaling=scale-down-width" target="_blank" class="btn dark">See Prototype</a>
+        <a href="https://www.figma.com/proto/2rEueA6WJoBsgJJhmb0EjC/UX-Intensive-High-Fidelity-Prototype?node-id=0%3A1&scaling=scale-down-width" target="_blank" class="btn dark">See Desktop Prototype</a>
       </section>
 
       <section class="role-section portfolio bg-white">
@@ -46,6 +46,10 @@
         <div class="tools role-text">
           <h2 class="dark">TOOLS</h2>
           <p>Figma, UsabilityHub</p>
+        </div>
+        <div class="duration role-text">
+          <h2 class="dark">DURATION</h2>
+          <p>2 months</p>
         </div>
       </section>
 
@@ -65,34 +69,125 @@
       </section>
 
       <section class="comp-analysis portfolio bg-white">
-        <div class="left-content">
+
+        <div>
           <h2 class="dark">COMPETITIVE ANALYSIS</h2>
-          <p>Some of the bigger players in the wedding space, such as The Knot and Wedding Wire, are focused on blog content, vendor reviews or selling goods. While many do offer basic planning tools, such as wedding checklists, budgeting tools, and guest list managers, these tools aren’t collaborative. Need to plan something outside of these specific use cases? You can’t.</p>
+          <p>Some of the bigger players in the wedding space are focused on blog content, vendor reviews or selling goods. While many do offer basic planning tools, such as wedding checklists, budgeting tools, and guest list managers, these tools aren’t collaborative. Need to plan something outside of these specific use cases? You can’t. In addition, their UIs are ad-heavy due to their focus on vendors.
+            Through our analysis, we identified a gap in the market for a more collaborative, customizable, and modern wedding planning destination.</p>
+          <a href="https://docs.google.com/spreadsheets/d/1tETZ32wmsNx4aJxJcuKOhl6YTisUtcraexMLTz3HpxU/edit?usp=sharing" target="_blank" class="btn dark">See Full Analysis</a>
         </div>
-        <ul class="comp-analysis-logos bg-white">
-          <li class="logo-1"><img src="images/gather/weddingwire-logo.png" alt="Wedding Wire logo" /></li>
-          <li class="logo-2"><img src="images/gather/theknot-logo.png" alt="The Knot logo" /></li>
-          <li class="logo-3"><img src="images/gather/zola-logo.png" alt="Zola logo" /></li>
-        </ul>
+
+        <div class="brand-comparison">
+
+          <div class="brand brand-1">
+            <div class="brand-logo">
+              <img src="images/gather/weddingwire-logo.png" alt="Wedding Wire logo" id="ww"/>
+            </div>
+            <div class="brand-desc">
+              <div class="thumbup">
+                <img src="images/gather/icons8-thumb_up.png" alt="Pros" />
+              </div>
+              <div class="pro">
+                <p>Extensive catalog of wedding content: vendor directory, advice, etc</p>
+              </div>
+              <div class="thumbdown">
+                <img src="images/gather/icons8-thumbs_down.png" alt="Cons" /></p>
+              </div>
+              <div class="con">
+                <p>Tools are limited, not shareable; UI distracting</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="brand brand-2">
+            <div class="brand-logo">
+              <img src="images/gather/theknot-logo.png" alt="The Knot logo" id="knot"/>
+            </div>
+            <div class="brand-desc">
+              <div class="thumbup">
+                <img src="images/gather/icons8-thumb_up.png" alt="Pros" />
+              </div>
+              <div class="pro">
+                <p>Offers offline services as well as extensive blog content</p>
+              </div>
+              <div class="thumbdown">
+                <img src="images/gather/icons8-thumbs_down.png" alt="Cons"/></p>
+              </div>
+              <div class="con">
+                <p>Tools are not shareable; branding most traditional of the three</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="brand brand-3">
+            <div class="brand-logo">
+              <img src="images/gather/zola-logo.png" alt="Zola logo" id="zola"/>
+            </div>
+            <div class="brand-desc">
+              <div class="thumbup">
+                <img src="images/gather/icons8-thumb_up.png" alt="Pros" />
+              </div>
+              <div class="pro">
+                <p>Strong registry product as differentiator</p>
+              </div>
+              <div class="thumbdown">
+                <img src="images/gather/icons8-thumbs_down.png" alt="Cons" /></p>
+              </div>
+              <div class="con">
+                <p>Also not collaborative, planning resources not as extensive</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
       </section>
 
       <section class="user-research portfolio">
-        <h2 class="dark">USER PERSONAS</h2>
+        <h2 class="dark">USER RESEARCH</h2>
+        <p>To test our theory, we surveyed people about their wedding planning habits. Our findings supported the hypothesis that couples needed a more robust and collaborative planning product than what exists today:
+
         <div class="user-research-content">
           <div class="stat-div">
             <p class="statistic">63%</p>
           </div>
-          <div class="stat-desc">
-            <p><span class="orange">of people surveyed use more than one tool in parallel to plan wedding and wedding-related projects</span>, such as honeymoons, showers, and bachelorette parties. The most popular tools used to plan these projects are Google Drive and Pinterest.</p>
+          <div class="stat-desc stat-1">
+            <p><span class="orange">of people surveyed use more than one tool in parallel to plan wedding and wedding-related projects</span>, such as honeymoons and shower. The most popular tools used are Google Drive and Pinterest.</p>
+          </div>
+        </div>
+        <div class="user-research-content">
+          <div class="stat-div">
+            <p class="statistic">80%</p>
+          </div>
+          <div class="stat-desc stat-2">
+            <p><span class="orange">of people surveyed shared wedding planning responsibilities with their partner,</span> rather than planning by themselves.</p>
+          </div>
+        </div>
+        <div class="user-research-content">
+          <div class="stat-div">
+            <p class="statistic">47%</p>
+          </div>
+          <div class="stat-desc stat-3">
+            <p><span class="orange">of people surveyed recall losing track of at least one wedding-related document</span>, such as a contract, a budget spreadsheet, or a to-do list.</p>
           </div>
         </div>
       </section>
 
       <section class="personas portfolio bg-white">
-        <div class="left-content">
           <h2 class="dark">PERSONAS</h2>
-          <p><span class="bold">Jessica (29)</span> and <span class="bold">David (32)</span> are tech savvy and use cloud productivity tools regularly. Their goal is to collaborate on wedding planning but they have bits and pieces of their planning all stored in different places.</p>
-        </div>
+
+          <div class="personas-text">
+            <div class="persona-1">
+              <p><span class="bold">Jessica (29)</span> is a collector and saves images, contracts and other files on her computer, in her email, and on the web. She wants to make sure her fiancé has access to all these items.</p>
+            </div>
+            <div class="persona-2">
+              <p><span class="bold">David (32)</span> is task-oriented and wants to maintain up-to-date files like guest lists and to dos. He wants to make sure his fiancée is working off the same files that he is.</p>
+            </div>
+          </div>
+
+          <div class="left-content">
+            <a href="https://www.figma.com/file/3HyKtGiIMy3bZdNKjhcnpr/UX-Intensive-User-Personas-Wedding?node-id=0%3A1" target="_blank" class="btn dark">See Personas</a>
+          </div>
       </section>
 
       <section class="personas-image bg-white">
@@ -102,7 +197,8 @@
       <section class="user-stories portfolio bg-white">
         <div class="left-content lower">
           <h2 class="dark">USER STORIES & FLOWS</h2>
-          <p>We prioritized user stories around the popular planning actions:</p>
+          <p>Instead of the wedding-specific tools that other competitors already offer, we focused our user stories on the areas where our research showed users would benefit most: productivity-style tools like those they already use, but accessible in one-spot, and beautiful to use.</p>
+          <p>We prioritized user stories around these popular planning activities:</p>
           <ul class="bulleted-list">
             <li>I want to save a website or article for later</li>
             <li>I want to create a document</li>
@@ -110,12 +206,12 @@
             <li>I want to create a spreadsheet</li>
             <li>I want to share items with other people</li>
           </ul>
-          <a href="https://www.figma.com/file/GJwU4bJWwzW2ml0rxQCLmuuw/UX-Intensive-Wireframes" target="_blank" class="btn dark">See User Flows</a>
+          <a href="https://drive.google.com/open?id=1IjxFW1LoyEMgsKmH9vrOt8ttksXizVBv" target="_blank" class="btn dark">See User Flows</a>
         </div>
       </section>
 
       <section class="user-flows">
-        <img src="images/gather/user-flows.png" class="full-width" alt="Sketch of user flow" />
+        <img src="images/gather/user-flows.jpg" class="full-width" alt="Sketch of user flow" />
       </section>
 
       <div class="container-wireframes">
@@ -146,11 +242,20 @@
 
         <section class="branding portfolio rm-portfolio">
           <h2 class="dark">BRANDING</h2>
-          <p>Modern, timeless and gender-neutral were guiding principles for our branding.</p>
+          <p>Modern, timeless and gender-neutral were guiding principles for our branding. As a collaborative, productive workspace for couples to plan their wedding, Gather should feel clean and professional, but also inspire creativity. It should appeal to both genders and feel inviting for couples both traditional and non-traditional.</p>
+        </section>
+
+        <section class="logo-brainstorm">
+          <img src="images/gather/logo-brainstorm.jpg" class="full-width" alt="Logo sketches">
         </section>
 
         <section class="moodboard">
-          <img src="images/gather/moodboard.png" class="full-width" alt="Moodboard">
+          <img src="images/gather/moodboard.jpg" class="full-width" alt="Moodboard">
+        </section>
+
+        <section class="color-text portfolio rm-portfolio">
+          <h2 class="dark">COLORS</h2>
+          <p>We chose a neutral, organic color palette that was heavily white in order to evoke the "blank canvas" on which couples can dream up their personal dream wedding. Since every individual couple has their own unique color palettes and preferences for their event, the neutral color palette would not distract or compete.</p>
         </section>
 
         <section class="colors">
@@ -161,6 +266,11 @@
             <li class="color-4"></li>
             <li class="color-5"></li>
           </ul>
+        </section>
+
+        <section class="type-text portfolio rm-portfolio">
+          <h2 class="dark">TYPE</h2>
+          <p>The type we chose also reflects a modern and timeless aesthetic. Our header font, Playfair Display, is a serif font who lends a serious quality that matches the occassion. It also is reminiscent of type often letterpressed on wedding invitations. For body type, we chose a simple and modern sans-serif to give the site a more productivity-based feel.</p>
         </section>
 
         <section class="type">
@@ -192,7 +302,7 @@
         </div>
         <div class="side-by-side">
           <div class="side">
-            <img src="images/gather/mockups-4.png" class="product-screenshot img-1" alt="Side by side view of dashboard wireframe and high-fidelity mockup" />
+            <img src="images/gather/mockups-1.png" class="product-screenshot img-1" alt="Side by side view of dashboard wireframe and high-fidelity mockup" />
           </div>
           <div class="side">
             <img src="images/gather/mockups-2.png" class="product-screenshot img-2" alt="Side by side view of add item wireframe and high-fidelity mockup" />
@@ -203,16 +313,16 @@
       <section class="preference-test portfolio">
         <div>
           <h2 class="dark">PREFERENCE TESTS</h2>
-          <p>Another avenue we used for quick design feedback was preference testing:</p>
+          <p>Another avenue we used for quick design feedback was preference testing. While we inititally designed a minimalist transparent navigation bar for the homepage, participants clearly favored the white, archway design:</p>
         </div>
         <div class="side-by-side">
           <div class="side">
-            <img src="images/gather/pref-test-1.png" class="product-screenshot img-1" alt="Desktop design A: white navigation bar" />
-            <p class="italicized center">67% of testers prefer this design</p>
+            <img src="images/gather/pref-test-1.jpg" class="product-screenshot img-1" alt="Desktop design A: white navigation bar" />
+            <p class="italicized center"><span class="i-bold">67%</span> of testers prefer this design</p>
           </div>
           <div class="side">
-            <img src="images/gather/pref-test-2.png" class="product-screenshot img-2" alt="Desktop design B: transparent navigation bar" />
-            <p class="italicized center">33% of testers prefer this design</p>
+            <img src="images/gather/pref-test-2.jpg" class="product-screenshot img-2" alt="Desktop design B: transparent navigation bar" />
+            <p class="italicized center"><span class="i-bold">33%</span> of testers prefer this design</p>
           </div>
         </div>
       </section>
@@ -242,7 +352,7 @@
 
       <footer>
         <h2 class="footer-name">Connect</h2>
-        <a href="mailto:ellen@ellenshen.com" id="email">ellen@ellenrotroff.com</a>
+        <a href="mailto:ellen@ellenshen.com" target="_blank" id="email">ellen@ellenrotroff.com</a>
           <ul class="social-links">
             <li class="linkedin"><a href="https://www.linkedin.com/in/eshen/" target="_blank"><img src="images/icons8-linkedin.png" alt="LinkedIn icon" /></a></li>
             <li class="github"><a href="https://github.com/lnshen" target="_blank"><img src="images/icons8-github.png" alt="Github icon" /></a></li>
