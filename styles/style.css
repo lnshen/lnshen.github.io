@@ -1697,7 +1697,7 @@ section.ca-friendly {
   }
 
   .persona-img img {
-    max-height: 20rem;
+    max-width: 20rem;
   }
 
   .persona-desc {
@@ -1816,6 +1816,18 @@ section.ca-friendly {
   .mockup-img-fr-1,
   .mockup-img-fr-2,
   .mockup-img-fr-3, {
+    height: 100%;
+    margin: auto 0;
+    padding: 0 0.5rem;
+  }
+
+  .persona-img {
+    max-width: 20rem;
+  }
+
+  .wf-img-1,
+  .wf-img-2,
+  .wf-img-3, {
     height: 100%;
     margin: auto 0;
     padding: 0 0.5rem;
