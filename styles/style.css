@@ -802,12 +802,11 @@ height: 4.8rem;
 footer {
   display: grid;
   grid-area: footer;
-  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-columns: 1fr 3fr 4fr 3fr 1fr;
   grid-template-areas:
-    ". footer-name ."
-    ". email ."
-    ". social-links .";
-  padding: 10rem 0;
+    ". footer-name footer-name footer-name ."
+    ". . social-links . .";
+  padding: 5rem 0;
   text-align: center;
   margin-bottom: 0rem;
 }
@@ -820,11 +819,6 @@ footer {
   grid-area: footer-name;
 }
 
-#email {
-  grid-area: email;
-  padding: 0 0 3.5em 0;
-}
-
 .social-links {
   display: flex;
   grid-area: social-links;
@@ -832,9 +826,7 @@ footer {
 
 .linkedin,
 .github,
-.twitter,
-.instagram,
-.pinterest {
+.email {
   flex-grow: 1;
 }
 
